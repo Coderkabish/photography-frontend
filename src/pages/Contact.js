@@ -1,49 +1,46 @@
-import React from 'react';
-import '../styles/contact.css';
+import React from "react";
 
 const Contact = () => {
   return (
-    <section className="contact-section">
-      <div className="container">
-        <h2 className="section-title">Contact Me</h2>
-        <div className="contact-container">
-          <div className="contact-info">
-            <h3>Get In Touch</h3>
-            <p>If you are interested in working with me, or you have any questions, please fill out the form with the details of your project or inquiry.</p>
-            <div className="contact-details">
-              <div className="contact-item">
-                <i className="fas fa-envelope"></i>
-                <span>info@elialocardi.com</span>
-              </div>
-              <div className="contact-item">
-                <i className="fas fa-map-marker-alt"></i>
-                <span>Florida's Space Coast, USA</span>
-              </div>
-              <div className="social-links">
-                <a href="https://facebook.com" target="_blank" rel="noopener noreferrer"><i className="fab fa-facebook-f"></i></a>
-                <a href="https://twitter.com" target="_blank" rel="noopener noreferrer"><i className="fab fa-twitter"></i></a>
-                <a href="https://instagram.com" target="_blank" rel="noopener noreferrer"><i className="fab fa-instagram"></i></a>
-                <a href="https://youtube.com" target="_blank" rel="noopener noreferrer"><i className="fab fa-youtube"></i></a>
-              </div>
+    <section className="section bg-primary pt-32">
+      <div className="container mx-auto px-4">
+        <div className="max-w-3xl mx-auto">
+          <h1 className="heading-1 mb-8 text-center">Contact</h1>
+          <form className="space-y-6">
+            <div>
+              <label htmlFor="name" className="block text-text-primary mb-2">
+                Name
+              </label>
+              <input
+                type="text"
+                id="name"
+                className="w-full px-4 py-3 rounded-none bg-secondary text-text-primary border border-gray-800 focus:outline-none focus:border-accent transition-colors duration-300"
+              />
             </div>
-          </div>
-          <div className="contact-form">
-            <form>
-              <div className="form-group">
-                <input type="text" id="name" name="name" placeholder="Your Name" required />
-              </div>
-              <div className="form-group">
-                <input type="email" id="email" name="email" placeholder="Your Email" required />
-              </div>
-              <div className="form-group">
-                <input type="text" id="subject" name="subject" placeholder="Subject" required />
-              </div>
-              <div className="form-group">
-                <textarea id="message" name="message" rows="5" placeholder="Your Message" required></textarea>
-              </div>
-              <button type="submit" className="btn submit-btn">Send Message</button>
-            </form>
-          </div>
+            <div>
+              <label htmlFor="email" className="block text-text-primary mb-2">
+                Email
+              </label>
+              <input
+                type="email"
+                id="email"
+                className="w-full px-4 py-3 rounded-none bg-secondary text-text-primary border border-gray-800 focus:outline-none focus:border-accent transition-colors duration-300"
+              />
+            </div>
+            <div>
+              <label htmlFor="message" className="block text-text-primary mb-2">
+                Message
+              </label>
+              <textarea
+                id="message"
+                rows="6"
+                className="w-full px-4 py-3 rounded-none bg-secondary text-text-primary border border-gray-800 focus:outline-none focus:border-accent transition-colors duration-300"
+              ></textarea>
+            </div>
+            <button type="submit" className="btn btn-primary w-full">
+              Send Message
+            </button>
+          </form>
         </div>
       </div>
     </section>

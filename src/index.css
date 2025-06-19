@@ -1,0 +1,67 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    @apply scroll-smooth;
+  }
+  
+  body {
+    @apply bg-primary text-text-primary font-sans antialiased;
+  }
+}
+
+@layer components {
+  .container {
+    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+  }
+  
+  .btn {
+    @apply px-6 py-3 rounded-none transition-all duration-300 uppercase tracking-wider text-sm font-medium;
+  }
+  
+  .btn-primary {
+    @apply bg-accent text-white hover:bg-blue-600;
+  }
+  
+  .section {
+    @apply py-24 md:py-32;
+  }
+  
+  .heading-1 {
+    @apply text-4xl md:text-5xl lg:text-6xl font-bold text-text-primary tracking-tight;
+  }
+  
+  .heading-2 {
+    @apply text-3xl md:text-4xl font-bold text-text-primary tracking-tight;
+  }
+  
+  .heading-3 {
+    @apply text-2xl md:text-3xl font-bold text-text-primary tracking-tight;
+  }
+
+  .nav-link {
+    @apply text-text-primary hover:text-accent transition-colors duration-300 uppercase tracking-wider text-sm font-medium;
+  }
+
+  .gallery-grid {
+    @apply grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6;
+  }
+
+  .gallery-item {
+    @apply relative overflow-hidden aspect-square shadow-lg;
+  }
+
+  .gallery-image {
+    @apply w-full h-full object-cover transition-transform duration-700 group-hover:scale-110;
+  }
+
+  .gallery-overlay {
+    @apply absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-40 transition-opacity duration-300;
+  }
+
+  .gallery-content {
+    @apply absolute inset-0 flex flex-col items-center justify-center text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300 p-4;
+  }
+} 
